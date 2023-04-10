@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.StatisticItemTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-10T06:17:12" hostname="IVASILEV-PC54" time="0.018">
+  <properties/>
+  <testcase name="test()" classname="test.StatisticItemTest" time="0.018"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
