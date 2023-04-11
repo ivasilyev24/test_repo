@@ -138,10 +138,11 @@ public class Application1 {
         System.out.println("/* —татистика /");
         System.out.println("/*************/");
         System.out.println();
-        System.out.println("ƒубликаты объектов (объекты с одинаковой группой(УgroupФ) и типом (УtypeФ)) с количеством их повторений.");
+        System.out.println("ƒубликаты объектов (объекты с одинаковой группой(group) и типом (type)) с количеством их повторений.");
         System.out.println("=========================================================================================================");
         for (Map.Entry<String, StatisticItem> e : map1.entrySet()) {
-            System.out.printf("group: %s type: %s  count: %d", e.getKey(), e.getValue().type, e.getValue().count);
+            System.out.printf("group: %s", e.getKey());
+             System.out.printf(" ѕары type и count: %s", e.getValue().notUniqueValues.entrySet().toString());
             System.out.println();
         }
         System.out.println();
