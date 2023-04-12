@@ -22,11 +22,22 @@ public class StatisticItem {
      * см. https://www.baeldung.com/guava-bloom-filter
      */
     public void add(Item item) {
-        if (!uniqueValues.contains(item.type)) {
+        if (uniqueValues!=null && !uniqueValues.contains(item.type)) {
             uniqueValues.add(item.type);
         } else {
             Integer count = notUniqueValues.get(item.type);
-            notUniqueValues.put(item.type, count==null? 2 : count+1);
+            if (count!=null && count+1 > 3) {
+                if (uniqueValues!=null) {
+                    uniqueValues.clear();
+                    //System.gc();
+                }
+                uniqueValues = null;
+            }
+            if (uniqueValues==null && count!=null && count+1 > 3) {
+                notUniqueValues.put(item.type, count+1);
+            } else if (uniqueValues!=null) {
+                notUniqueValues.put(item.type, count == null ? 2 : count + 1);
+            }
         }
     }
 

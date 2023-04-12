@@ -2,7 +2,7 @@
 *    gradle build (из idea)
 *    провер€лось на java 11
 *    ƒл€ запуска приложени€ выполните:
-    java -Dfile.encoding=UTF-8 -jar <дирректои€ проекта>\build\libs\test7-1.0-SNAPSHOT-all.jar
+    java ЦXmx512m -Dfile.encoding=UTF-8 -jar <дирректои€ проекта>\build\libs\test7-1.0-SNAPSHOT-all.jar
 *   ƒл€ проверки работоспособности можно ввести следующие имена файлов:
 -    <дирректои€ проекта>\src\main\resources\out_litle.json
 -    <дирректои€ проекта>\src\main\resources\out_litle.csv

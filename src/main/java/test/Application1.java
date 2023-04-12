@@ -61,8 +61,9 @@ public class Application1 {
                 Item current = mi.next();
                 collectStatistics(current);
                 index++;
-                if (index % 10 == 0) {
+                if (index % 100000 == 0) {
                     System.out.println(index);
+                    //System.gc();
                 }
             }
         } catch (Exception e) {
@@ -90,8 +91,9 @@ public class Application1 {
                 index++;
                 readObject(jParser);
 
-                if (index % 10 == 0) {
+                if (index % 100000 == 0) {
                     System.out.println(index);
+                    //System.gc();
                 }
             }
             printStatistics();
